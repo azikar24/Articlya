@@ -41,7 +41,7 @@ From the left pane choose ```com.azikar24.articlya (androidTest)``` folder then 
 do the same for all of the 3 test files
 
 ### For Code Coverage
-The Project only had one method that i can test with the run code coverage, in the file ArticleRepositoryTest
+The Project only had one method that I can test with the run code coverage, in the file ArticleRepositoryTest
 The remaining methods were context based and I was not able to run the code coverage
 
   
