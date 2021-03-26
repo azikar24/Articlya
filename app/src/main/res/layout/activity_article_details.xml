@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.ArticleDetails">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/imagelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarLayout">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/articleImage"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#40000000"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="3"
+            android:padding="10dp"
+            tools:text="@string/title"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/articleImage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imagelayout">
+
+        <TextView
+            android:id="@+id/abstractt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/button"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            tools:text="@string/abstract_text"
+            android:textSize="15sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="20dp"
+            android:id="@+id/button"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_width="match_parent"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:onClick="readmore"
+                android:textColor="@color/white"
+                android:text="@string/read_more" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

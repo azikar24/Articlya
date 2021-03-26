@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Articlya</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="read_more">Read More</string>
+    <string name="abstract_text">Article\'s abstract</string>
+    <string name="title">Title</string>
+    <string name="by_author">by author</string>
+    <string name="date">00/00/0000</string>
+    <string name="category">Category</string>
+</resources>
